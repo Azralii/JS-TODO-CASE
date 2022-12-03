@@ -1,15 +1,24 @@
-const inputField = document.querySelector("input-task");
-const form = document.querySelector("form");
-const searchInput = document.querySelector("filter");
-const task = document.querySelector("tasks");
-const removeAllBtn = document.querySelector("clear-tasks");
-const msgBox = document.querySelector("msg");
+const inputText = document.querySelector("#txt");
+const myButton = document.querySelector(".btn-list");
+const list = document.querySelector(".container ul");
+myButton.addEventListener("click",(e)=> {
+    if(inputText.value != ""){
 
-
-form.addEventListener("submit", addTask)
-
-function addTask(e){
-    console.log(inputField.value)
-    e.preventDfault();
+    e.preventDefault();
+    // skapa list
+    const myLi = document.createElement("li");
+    myLi.innerHTML = inputText.value;
+    list.appendChild(myLi);
+    //skapa span
+    const mySpan = document.createElement("span");
+    mySpan.innerHTML = "X";
+    myLi.appendChild(mySpan);
 }
-
+    const close = document.querySelectorAll("span");
+    for(let i=0;i<close.length;i++){
+        close[i].addEventListener("click", ()=>{
+            close[i].parentElement.style.display = "none";
+        })
+    }
+    inputText.value = "";
+});

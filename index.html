@@ -1,56 +1,24 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dish Application </title>
     <link rel="stylesheet" href="style.css">
-    <title>TodoList</title>
+    
 </head>
 <body>
-
-<div class="container">
-<div class="input-ui">
-    <h3>Todo List</h3>
-    <form class="from">
-        <input type="text" placeholder="task name" class="input-task">
-        <input type="submit" value="add">
-
-    </form>
-     <div>
-     <div class="output-ui">
-        <input type="text" name="filter" class="filter" placeholder="search task">
-        <label for="filter"></label>
-        <ul class="task">
-            <li class="task">
-                text
-            <div class="icon">
-            <a href="#" class="delete"></a>
-            <a href="#" class="delete"></a>
-
-
-              </div>
-            </li>
-         <div class="msg">
-            <p>Start adding tasks</p>
-         </div>
-
-
-        </ul>   
-        <a href="" class="clear-tasks">clear</a>
-    </div>
-</div>
-
-
-
-
-
-
-
-<script src="script.js"></script>
-
-
+<h1>Add List Item</h1>
+<form>
+    <input type="text" name="text" id="txt" required>
+    <button type="submit" class="btn-list">+</button>
 </form>
+<div class="container">
+    <ul>
+    </ul>
+    <script src="script.js"></script>
+
 </div>
 </body>
 </html>

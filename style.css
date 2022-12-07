@@ -17,25 +17,21 @@ h1{
     margin-top: 100px;
 
 }
-form{
+input button{
     margin-top: 50px;
     background: #fff;
     box-shadow: -3px 6px 4px #222;
 }
-form input{
-    width: 250pz;
+input button{
+    width: 250px;
     height: 40px;
     border: none;
     outline: none;
     padding: 0 5px;
 }
-form button{
-    width: 50px;
-    height: 40px;
-    border: none;
+button{
     background: teal;
     color: white;
-    outline: none;
     cursor: pointer;
 }
 .container{
@@ -57,34 +53,16 @@ ul li {
     margin: 5px 0;
     box-shadow: -3px 6px 4px #222;
 }
-ul li span{
+ul li button{
     position: absolute;
     top: 0;
     right: 0;
     width: 50px;
     text-align: center;
-    background: rgb(222, 45, 45);
+    background: rgb(80, 222, 45);
 
 }
-/*ul li{
-    background: #888;
-    color: #fff;
-    text-decoration: blanchedalmond;
-}
-ul li.checked::before{
-    content: " ";
-    position: absolute;
-    border-color: #fff;
-    border-style: solid;
-    border-width: 0 2px 2px 0;
-    top: 10px;
-    left: -15px;
-    transform: rotate(45deg);
-    height: 15px;
-    width: 7px;
-}
-form button:hover{
-    background: #d88771;
-    color: white;
+.marked{
+    background-color: yellow;
 }
 

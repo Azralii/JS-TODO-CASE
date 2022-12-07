@@ -10,14 +10,57 @@
 </head>
 <body>
 <h1>Add List Item</h1>
-<form>
     <input type="text" name="text" id="txt" required>
-    <button type="submit" class="btn-list">+</button>
-</form>
+    <button type="submit" class="btn-list" onclick="addItem()">Add</button>
+    <button type="submit" class="btn-list" onclick="editItem()">Edit</button>
 <div class="container">
-    <ul>
+    <ul id="list">
+
     </ul>
-    <script src="script.js"></script>
+    <script>
+        const inputText = document.getElementById("txt");
+        const items = document.querySelectorAll("#list li");
+        var tab = [], index;
+        for(let i=0;i<items.length;i++){
+            tab.push(items[i].innerHTML);
+             }
+            for(let i=0;i<items.length;i++){
+            items[i].onclick = function(){
+                index = tab.indexOf(this.innerHTML);
+                console.log(this.innerHTML + "Index = " + index);
+                inputText.value = this.innerHTML;
+            };
+        }
+        function addItem(){
+            const listNode = document.getElementById("list"),
+            textNode = document.createTextNode(inputText.value),
+            liNode = document.createElement("li");
+            liNode.appendChild(textNode);
+            listNode.appendChild(liNode);
+            const markButton = document.createElement("button"),
+            delButton = document.createElement("button");
+            markButton.innerHTML = "Mark";
+            delButton.innerHTML = "Delite";
+            listNode.appendChild(markButton);
+            listNode.appendChild(delButton);
+            document.getElementById("list").appendChild(liNode)
+            delButton.addEventListener("click",(e)=>{
+                if(inputText.value !== ""){ 
+                    e.preventDefault();
+                const close = document.querySelectorAll("button");
+            for(let i=0;i<close.length;i++){
+            close[i].addEventListener("click", ()=>{
+            close[i].parentElement.style.display = "none";
+        })
+         }
+        }
+        }) 
+         
+         }
+        function editItem(){
+            items[index].innerHTML = inputText.value;
+        }
+    </script>
 
 </div>
 </body>

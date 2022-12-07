@@ -1,5 +1,3 @@
-const inputText = document.querySelector("#txt");
-const myButton = document.querySelector(".btn-list");
 const list = document.querySelector(".container ul");
 myButton.addEventListener("click",(e)=>{  
     if(inputText.value != ""){

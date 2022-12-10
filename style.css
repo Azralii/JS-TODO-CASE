@@ -1,71 +1,80 @@
 *{
-    font-family: sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 body{
     min-height: 100vh;
     background: linear-gradient(65deg,rgb(181,41,231),rgb(216,43,43));
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    color: white;
+    font-family: "Poppins", sans-serif;
 }
 h1{
-    color: rgb(251,177,39);
-    margin-top: 100px;
-
+    font-size: 24px;
 }
-form{
-    margin-top: 50px;
-    background: #fff;
-    box-shadow: -3px 6px 4px #222;
+h1, form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-form input{
-    width: 250px;
-    height: 40px;
+form input, form button{
+    padding: 5px;
+    font-size: 20px;
     border: none;
-    outline: none;
-    padding: 0 5px;
+    background: white;
+    
 }
 form button{
-    width: 50px;
-    height: 40px;
-    background: teal;
+    background: rgb(47, 47, 194);
     color: white;
-    outline: none;
+    border: none;
     cursor: pointer;
+}
+form button:hover{
+    background: #4eb7e7;
+    color: black;
 }
 .container{
-    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-ul{
+.list{
+    min-width: 30%;
     list-style: none;
-    width: 500px;
 }
-ul li {
-    width: 100%;
-    background: #fff;
-    height: 40px;
-    line-height: 40px;
-    padding: 0 5px;
-    position: relative;
+.nested-div{
+    margin: 8px;
+    background: white;
+    color: black;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nested-div li{
+    flex: 1;
+}
+.edit-btn, .del-btn, .mark-btn{
+    background: red;
+    color: white;
+    border: none;
+    padding: 16px;
     cursor: pointer;
-    display: block;
-    margin: 5px 0;
-    box-shadow: -3px 6px 4px #222;
+    font-size: 10px;
 }
-ul li span{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50px;
-    text-align: center;
-    background: rgb(80, 222, 45);
-
+.edit-btn{
+    background: rgb(23, 23, 110);
+}
+.mark-btn{
+    background: green;
+}
+.list-item{
+    padding: 0px 5px;
 }
 .marked{
-    background-color: yellow;
+    background-color: rgb(86, 40, 90);
+    color: white;
 }
 

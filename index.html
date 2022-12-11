@@ -37,7 +37,7 @@
             myDiv.classList.add("nested-div");
             //Creating li element
             const myLi = document.createElement("li");
-            myLi.innerHTML = inputText.value;
+            myLi.innerText = inputText.value;
             myLi.classList.add("list-item");
             myDiv.appendChild(myLi);
             //Edit Button
@@ -63,20 +63,12 @@
         }
         function editDeleteMark(ev){
             const item = ev.target;
+            const items = ev.target.parentElement;
             //Edit the Li Element
-            if(item.classList[0] === ""){
-                const edit = item.parentElement;
-                inputText.value = edit.textContent;
-                item.textContent = "Save";
-            }
-            if(item.textContent === ""){
-                const input = item.parentElement; 
-                const myLi = document.createElement("li");
-                myLi.textContent = input.value;
-                list.insertBefore(myLi, input);
-                list.removeChild();
-                item.textContent = "Edit";
-            }
+            if(item.classList[0] === "edit-btn"){
+                inputText.value = items.firstChild.innerText;
+                item.parentElement.remove();
+            }            
             //Delete Li Element
             if(item.classList[0] === "del-btn"){
                 const del = item.parentElement;
